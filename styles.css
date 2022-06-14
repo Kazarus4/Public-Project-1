@@ -1,1 +1,645 @@
+#menu, #menu ul       
+
+{
+        padding : 0; /* pas de marge intÃ©rieure */
+        margin : 0; /* ni extÃ©rieure */
+        list-style : none; /* on supprime le style par dÃ©faut de la liste */
+        line-height : 30px; /* on dÃ©finit une hauteur pour chaque Ã©lÃ©ment */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menu /* Ensemble du menu */
+
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 80%; /* hauteur du texte : 12 pixels */
+}
+
+#menu a /* Contenu des listes */
+
+{
+        display : block; /* on change le type d'Ã©lÃ©ment, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intÃ©rieure */
+        background : #090; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par dÃ©faut des liens (la plupart du temps = soulignÃ©) */
+        width : 215px; /* largeur */
+
+}
+
+#menu li /* Elements des listes */      
+
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche Ã  droite de chaque Ã©lÃ©ment */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menu li
+
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente Ã  droite de chaque Ã©lÃ©ment */
+}
+
+#menu li ul /* Sous-listes */
+
+{ 
+        position: absolute; /* Position absolue */
+        width: 215px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menu li ul li /* Ã‰lÃ©ments de sous-listes */
+
+{
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque Ã©lÃ©ment d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menu li ul li                
+
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque Ã©lÃ©ment */
+}
+
+
+#menu li ul ul 
+
+{
+        margin    : -31px 0 0 215px; /* On dÃ©cale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-left     : 1px solid #fff ; /* Petite bordure Ã  gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" ... je me rÃ©pÃ¨te ;-) */
+
+html>body #menu li ul ul                
+
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque Ã©lÃ©ment */
+}
+
+#menu a:hover /* Lorsque la souris passe sur un des liens */    
+
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#menu li:hover ul ul, #menu li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste */
+
+{
+        left: -999em; /* On expÃ©die les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste ET sous-sous-lites lorsque la souris passe sur un Ã©lÃ©ment de sous-liste */
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#menuG, #menuG ul       
+
+{
+        padding : 0; /* pas de marge intÃ©rieure */
+        margin : 0; /* ni extÃ©rieure */
+        list-style : none; /* on supprime le style par dÃ©faut de la liste */
+        line-height : 30px; /* on dÃ©finit une hauteur pour chaque Ã©lÃ©ment */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menuG /* Ensemble du menu */
+
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 80%; /* hauteur du texte : 12 pixels */
+}
+
+#menuG a /* Contenu des listes */
+
+{
+        display : block; /* on change le type d'Ã©lÃ©ment, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intÃ©rieure */
+        background : #888; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par dÃ©faut des liens (la plupart du temps = soulignÃ©) */
+        width : 215px; /* largeur */
+
+}
+
+#menuG li /* Elements des listes */      
+
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche Ã  droite de chaque Ã©lÃ©ment */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuG li
+
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente Ã  droite de chaque Ã©lÃ©ment */
+}
+
+#menuG li ul /* Sous-listes */
+
+{ 
+        position: absolute; /* Position absolue */
+        width: 215px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menuG li ul li /* Ã‰lÃ©ments de sous-listes */
+
+{
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque Ã©lÃ©ment d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuG li ul li                
+
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque Ã©lÃ©ment */
+}
+
+
+#menuG li ul ul 
+
+{
+        margin    : -31px 0 0 215px; /* On dÃ©cale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-left     : 1px solid #fff ; /* Petite bordure Ã  gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" ... je me rÃ©pÃ¨te ;-) */
+
+html>body #menuG li ul ul                
+
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque Ã©lÃ©ment */
+}
+
+#menuG a:hover /* Lorsque la souris passe sur un des liens */    
+
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#menuG li:hover ul ul, #menuG li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste */
+
+{
+        left: -999em; /* On expÃ©die les sous-sous-listes hors du champ de vision */
+}
+
+#menuG li:hover ul, #menuG li li:hover ul, #menuG li.sfhover ul, #menuG li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste ET sous-sous-lites lorsque la souris passe sur un Ã©lÃ©ment de sous-liste */
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#menuC, #menuC ul       
+
+{
+        padding : 0; /* pas de marge intÃ©rieure */
+        margin : 0; /* ni extÃ©rieure */
+        list-style : none; /* on supprime le style par dÃ©faut de la liste */
+        line-height : 30px; /* on dÃ©finit une hauteur pour chaque Ã©lÃ©ment */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menuC /* Ensemble du menu */
+
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 80%; /* hauteur du texte : 12 pixels */
+}
+
+#menuC a /* Contenu des listes */
+
+{
+        display : block; /* on change le type d'Ã©lÃ©ment, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intÃ©rieure */
+        background : #00f; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par dÃ©faut des liens (la plupart du temps = soulignÃ©) */
+        width : 215px; /* largeur */
+
+}
+
+#menuC li /* Elements des listes */      
+
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche Ã  droite de chaque Ã©lÃ©ment */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuC li
+
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente Ã  droite de chaque Ã©lÃ©ment */
+}
+
+#menuC li ul /* Sous-listes */
+
+{ 
+        position: absolute; /* Position absolue */
+        width: 215px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menuC li ul li /* Ã‰lÃ©ments de sous-listes */
+
+{
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque Ã©lÃ©ment d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuC li ul li                
+
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque Ã©lÃ©ment */
+}
+
+
+#menuC li ul ul 
+
+{
+        margin    : -31px 0 0 215px; /* On dÃ©cale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-left     : 1px solid #fff ; /* Petite bordure Ã  gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" ... je me rÃ©pÃ¨te ;-) */
+
+html>body #menuC li ul ul                
+
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque Ã©lÃ©ment */
+}
+
+#menuC a:hover /* Lorsque la souris passe sur un des liens */    
+
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#menuC li:hover ul ul, #menuC li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste */
+
+{
+        left: -999em; /* On expÃ©die les sous-sous-listes hors du champ de vision */
+}
+
+#menuC li:hover ul, #menuC li li:hover ul, #menuC li.sfhover ul, #menuC li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste ET sous-sous-lites lorsque la souris passe sur un Ã©lÃ©ment de sous-liste */
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#menuS, #menuS ul       
+
+{
+        padding : 0; /* pas de marge intÃ©rieure */
+        margin : 0; /* ni extÃ©rieure */
+        list-style : none; /* on supprime le style par dÃ©faut de la liste */
+        line-height : 30px; /* on dÃ©finit une hauteur pour chaque Ã©lÃ©ment */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menuS /* Ensemble du menu */
+
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 80%; /* hauteur du texte : 12 pixels */
+}
+
+#menuS a /* Contenu des listes */
+
+{
+        display : block; /* on change le type d'Ã©lÃ©ment, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intÃ©rieure */
+        background : #809; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par dÃ©faut des liens (la plupart du temps = soulignÃ©) */
+        width : 215px; /* largeur */
+
+}
+
+#menuS li /* Elements des listes */      
+
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche Ã  droite de chaque Ã©lÃ©ment */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuS li
+
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente Ã  droite de chaque Ã©lÃ©ment */
+}
+
+#menuS li ul /* Sous-listes */
+
+{ 
+        position: absolute; /* Position absolue */
+        width: 215px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menuS li ul li /* Ã‰lÃ©ments de sous-listes */
+
+{
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque Ã©lÃ©ment d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuS li ul li                
+
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque Ã©lÃ©ment */
+}
+
+
+#menuS li ul ul 
+
+{
+        margin    : -31px 0 0 215px; /* On dÃ©cale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-left     : 1px solid #fff ; /* Petite bordure Ã  gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" ... je me rÃ©pÃ¨te ;-) */
+
+html>body #menuS li ul ul                
+
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque Ã©lÃ©ment */
+}
+
+#menuS a:hover /* Lorsque la souris passe sur un des liens */    
+
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#menuS li:hover ul ul, #menuS li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste */
+
+{
+        left: -999em; /* On expÃ©die les sous-sous-listes hors du champ de vision */
+}
+
+#menuS li:hover ul, #menuS li li:hover ul, #menuS li.sfhover ul, #menuS li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste ET sous-sous-lites lorsque la souris passe sur un Ã©lÃ©ment de sous-liste */
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#menuR, #menuR ul       
+
+{
+        padding : 0; /* pas de marge intÃ©rieure */
+        margin : 0; /* ni extÃ©rieure */
+        list-style : none; /* on supprime le style par dÃ©faut de la liste */
+        line-height : 30px; /* on dÃ©finit une hauteur pour chaque Ã©lÃ©ment */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+
+#menuR /* Ensemble du menu */
+
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 80%; /* hauteur du texte : 12 pixels */
+}
+
+#menuR a /* Contenu des listes */
+
+{
+        display : block; /* on change le type d'Ã©lÃ©ment, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intÃ©rieure */
+        background : #900; /* couleur de fond */        
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par dÃ©faut des liens (la plupart du temps = soulignÃ©) */
+        width : 215px; /* largeur */
+
+}
+
+#menuR li /* Elements des listes */      
+
+{ 
+        float : left; 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" */
+        border-right : 1px solid #fff; /* on met une bordure blanche Ã  droite de chaque Ã©lÃ©ment */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuR li
+
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente Ã  droite de chaque Ã©lÃ©ment */
+}
+
+#menuR li ul /* Sous-listes */
+
+{ 
+        position: absolute; /* Position absolue */
+        width: 215px; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+#menuR li ul li /* Ã‰lÃ©ments de sous-listes */
+
+{
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque Ã©lÃ©ment d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" */
+
+html>body #menuR li ul li                
+
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque Ã©lÃ©ment */
+}
+
+
+#menuR li ul ul 
+
+{
+        margin    : -31px 0 0 215px; /* On dÃ©cale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */ 
+        /* pour IE qui ne reconnaÃ®t pas "transparent" (comme prÃ©cÃ©demment) */
+        border-left     : 1px solid #fff ; /* Petite bordure Ã  gauche pour ne pas coller ... */      
+}
+
+/* IE ne reconnaissant pas le sÃ©lecteur ">" ... je me rÃ©pÃ¨te ;-) */
+
+html>body #menuR li ul ul                
+
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque Ã©lÃ©ment */
+}
+
+#menuR a:hover /* Lorsque la souris passe sur un des liens */    
+
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+
+#menuR li:hover ul ul, #menuR li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste */
+
+{
+        left: -999em; /* On expÃ©die les sous-sous-listes hors du champ de vision */
+}
+
+#menuR li:hover ul, #menuR li li:hover ul, #menuR li.sfhover ul, #menuR li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un Ã©lÃ©ment de liste ET sous-sous-lites lorsque la souris passe sur un Ã©lÃ©ment de sous-liste */
+
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+h1
+{
+        color: #66f;
+	background-color: #ddf;
+	border: 1px blue outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+h2
+{
+        color: orange;
+	background-color: #ff7;
+	border: 1px orange outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+h3
+{
+        color: #fd0;
+	background-color: #f90;
+	border: 1px orange outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+h4
+{
+        color: #fdd;
+	background-color: red;
+	border: 1px #fdd outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+h5
+{
+        color: grey;
+	background-color: #ddd;
+	border: 1px grey outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+h6
+{
+        color: #00f;
+	background-color: #aaf;
+	border: 1px blue outset;
+	padding: 0.1% 0.2%;
+        font-size: 0.8vw;
+	border-radius: 2px;
+        font-size: 1.05em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+	width: 80%;
+	text-align: center;
+}
+
+p
+{
+        color: black;
+	padding: 0.1% 0.2%;
+        border-radius: 2px; 
+        font-size: 0.75em;
+	font-family: "Comic Sans MS", Arial, Verdana, sans-serif;
+        width: 80%;
+}
+
+.left {
+	position: absolute;
+	left: 1%;
+	top: 4%;
+	width: 50%;
+	z-index: 1;
+
+}
+
+.top {
+	right: 1%;
+	top: 1%;
+	width: 99%;
+        z-index: 2;
+}
 
