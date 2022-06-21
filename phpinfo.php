@@ -2,4 +2,3 @@
 <?php
   phpinfo();
 ?>
-Pull test 3
